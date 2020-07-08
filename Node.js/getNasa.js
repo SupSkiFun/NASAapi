@@ -50,7 +50,8 @@ function makeDate()
     return new Date().toISOString().split('T')[0];
 }
 
-async function getInfo() {
+async function getInfo()
+{
     try
     {
         const res = await superagent.get(url).query(params).set(heads)  ;
