@@ -1,7 +1,8 @@
 const superagent = require('superagent');
 const lodash = require('lodash');
 
-class NasaFun {
+class NasaFun
+{
     static getAverage(obj)
     {
         let avg = ( ( obj['estimated_diameter_min'] + obj['estimated_diameter_max'] ) / 2 ) ;
@@ -54,8 +55,8 @@ async function getInfo()
 {
     try
     {
-        const res = await superagent.get(url).query(params).set(heads)  ;
-        return res.body['near_earth_objects'][hoy]
+        const res = await superagent.get(url).query(params).set(heads) ;
+        return res.body['near_earth_objects'][hoy] ;
     }
     catch (err)
     {
@@ -66,14 +67,13 @@ async function getInfo()
 
 function procInfo(resp)
 {
-    let arr = []
+    let arr = [] ;
     for (let r = 0 ; r < resp.length ; r++)
     {
         arr.push(NasaFun.makeObj(resp[r]))
     }
-    //lo = JSON.stringify(arr)
-    console.log(arr)
+    console.log(arr) ;
 }
 
-setConfig();
-getInfo().then(resp => procInfo(resp))
+setConfig() ;
+getInfo().then(resp => procInfo(resp)) ;
