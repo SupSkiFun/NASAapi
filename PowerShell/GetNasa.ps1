@@ -1,5 +1,12 @@
 class NasaFun
 {
+    static [double] GetAverage ( [psobject] $obj )
+    {
+        $avg = ($obj.psobject.properties.Value |
+            Measure-Object -Average).Average
+        return [Math]::Round($avg , 5)
+    }
+
     static [pscustomobject] MakeObj ( [psobject] $obj )
     {
         $cad = $obj.close_approach_data[0]
@@ -16,13 +23,6 @@ class NasaFun
         }
         $lo.PSObject.TypeNames.Insert(0,'SupSkiFun.NASA.Asteroid.Info')
         return $lo
-    }
-
-    static [double] GetAverage ( [psobject] $obj )
-    {
-        $avg = ($obj.psobject.properties.Value |
-            Measure-Object -Average).Average
-        return [Math]::Round($avg , 5)
     }
 }
 
