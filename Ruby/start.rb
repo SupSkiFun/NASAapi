@@ -10,10 +10,6 @@ class NasaFun
     end
 end
 
-
-
-
-
 def makeDate
     hoy = Time.now().to_s.split()[0]
 end
