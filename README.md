@@ -6,7 +6,8 @@ parsed into a flat, custom structure.  Some averaging and rounding takes place.
 Examples of Raw (not processed) JSON returned from the NASA API is in the JSON folder.
 
 Completed:  PowerShell, Python & Node.js
-ToDo:  Ruby, Go
+In Progress:  Ruby
+Some Day:  Go
 
 All Versions were written to run via PowerShell 7, however other
 shells can be used with little or no modification.
