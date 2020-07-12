@@ -33,8 +33,19 @@ def setConfig
 end
 
 setConfig()
+
+#  Basic Testing "Stuff" Below
+
 x = NasaFun.first_method(3.4562783,2.3899273)
 puts(x)
+
+testobj = {
+    'estimated_diameter_min' => 8.76543 ,
+    'estimated_diameter_max' => 9.67834
+}
+
+y=NasaFun.getAverage(testobj)
+puts(y)
 
 
 
