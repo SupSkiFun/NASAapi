@@ -30,7 +30,15 @@ def setConfig
 end
 
 def getInfo
-    res = HTTP.get($url, :headers => $heads, :params => $params)
+    begin
+        res = HTTP.get($url, :headers => $heads, :params => $params)
+        if not res.status.success?
+            raise res
+        end
+    rescue Exception => err
+        puts($msg,err)
+        exit
+    end
     puts(res)
 end
 
