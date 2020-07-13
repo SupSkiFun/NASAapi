@@ -6,6 +6,22 @@ class NasaFun
         avg = ( ( obj['estimated_diameter_min'] + obj['estimated_diameter_max'] ) / 2 )
         return avg.round(5)
     end
+
+    def self.makeObj(obj)
+        cad = obj['close_approach_data'][0]
+        lo = {
+            "Name" => obj['name'] ,
+            "ID" => obj['id'] ,
+            "PotentiallyHazardous" => obj['is_potentially_hazardous_asteroid'] ,
+            "CloseApproachDateTime" => cad['close_approach_date_full'] ,
+            "MissDistanceInKM" => round(float(cad['miss_distance']['kilometers']) , 5 ) ,
+            "AbsoluteMagnitudeH" => obj['absolute_magnitude_h'] ,
+            "DiameterInMeters" => NasaFun.getAverage(obj['estimated_diameter']['meters']) ,
+            "VelocityInKMpH" => round(float(cad['relative_velocity']['kilometers_per_hour']) , 5 ) ,
+            "URL" => obj['nasa_jpl_url']
+        }
+        return lo
+    end
 end
 
 def makeDate
@@ -44,7 +60,15 @@ def getInfo
     return jrd['near_earth_objects'][$hoy]
 end
 
-
+# def procInfo(resp)
+#     '''Process returned Asteroid information'''
+#     arr = [
+#         NasaFun.makeObj(r)
+#         for r in resp
+#     ]
+#     lo = json.dumps(arr)
+#     print(lo)
+# end
 
 setConfig()
 tt = getInfo()
