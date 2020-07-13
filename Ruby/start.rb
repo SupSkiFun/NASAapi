@@ -1,3 +1,5 @@
+require "http"
+
 class NasaFun
     def self.getAverage(obj)
         avg = ( ( obj['estimated_diameter_min'] + obj['estimated_diameter_max'] ) / 2 )
@@ -27,17 +29,40 @@ def setConfig
     }
 end
 
+def getInfo
+    res = HTTP.get($url, :headers => $heads, :params => $params)
+    puts(res)
+end
+
+
+# def getInfo():
+#     '''Retrieve Asteroid Information from NASA'''
+#     try:
+#         res = requests.get(url, headers=heads, params=params)
+#         res.raise_for_status()
+#     except requests.exceptions.HTTPError as err:
+#         print(msg + str(err))
+#         quit()
+#     else:
+#         jrd = res.json()
+#         return jrd['near_earth_objects'][hoy]
+
+
+
+
+
 setConfig()
+getInfo()
 
 #  Basic Testing "Stuff" Below
 
-testobj = {
-    'estimated_diameter_min' => 8.76543 ,
-    'estimated_diameter_max' => 9.67834
-}
+# testobj = {
+#     'estimated_diameter_min' => 8.76543 ,
+#     'estimated_diameter_max' => 9.67834
+# }
 
-y=NasaFun.getAverage(testobj)
-puts(y)
+# y=NasaFun.getAverage(testobj)
+# puts($url,$hoy,$msg,$heads,$params,$y)
 
 
 

@@ -34,7 +34,7 @@ Usage:
     C:\NASAapi> $ps = .\PowerShell\GetNasa.ps1
     C:\NASAapi> $nj = node.exe .\Node.js\getNasa.js | ConvertFrom-Json -Depth 4
     C:\NASAapi> $py = python.exe .\Python\getNasa.py | ConvertFrom-Json -Depth 4
-    Note that running the Node.Js and Python scripts without ConvertFrom-JSON results in
+5.  Note that running the Node.Js and Python scripts without ConvertFrom-JSON results in
     'plain' JSON.  Conversely, to obtain plain JSON from PowerShell, execute
     .\PowerShell\GetNasa.ps1 | ConvertTo-Json -Depth 4
 
