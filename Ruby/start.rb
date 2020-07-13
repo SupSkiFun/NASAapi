@@ -1,7 +1,4 @@
 class NasaFun
-    def self.first_method(x,y)
-        return (x + y).round(2)
-    end
     def self.getAverage(obj)
         avg = ( ( obj['estimated_diameter_min'] + obj['estimated_diameter_max'] ) / 2 )
         return avg.round(5)
@@ -33,9 +30,6 @@ end
 setConfig()
 
 #  Basic Testing "Stuff" Below
-
-x = NasaFun.first_method(3.4562783,2.3899273)
-puts(x)
 
 testobj = {
     'estimated_diameter_min' => 8.76543 ,
