@@ -71,7 +71,3 @@ end
 
 setConfig()
 procInfo(getInfo())
-
-
-
-
