@@ -1,12 +1,10 @@
 class NasaFun
-    class << self
-        def first_method(x,y)
-            return (x + y).round(2)
-        end
-        def getAverage(obj)
-            avg = ( ( obj['estimated_diameter_min'] + obj['estimated_diameter_max'] ) / 2 )
-            return avg.round(5)
-        end
+    def self.first_method(x,y)
+        return (x + y).round(2)
+    end
+    def self.getAverage(obj)
+        avg = ( ( obj['estimated_diameter_min'] + obj['estimated_diameter_max'] ) / 2 )
+        return avg.round(5)
     end
 end
 
