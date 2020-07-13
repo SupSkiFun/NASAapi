@@ -1,4 +1,5 @@
 require "http"
+require "json"
 
 class NasaFun
     def self.getAverage(obj)
@@ -39,28 +40,15 @@ def getInfo
         puts($msg,err)
         exit
     end
-    puts(res)
+    jrd = JSON.parse(res)
+    return jrd['near_earth_objects'][$hoy]
 end
-
-
-# def getInfo():
-#     '''Retrieve Asteroid Information from NASA'''
-#     try:
-#         res = requests.get(url, headers=heads, params=params)
-#         res.raise_for_status()
-#     except requests.exceptions.HTTPError as err:
-#         print(msg + str(err))
-#         quit()
-#     else:
-#         jrd = res.json()
-#         return jrd['near_earth_objects'][hoy]
-
-
 
 
 
 setConfig()
-getInfo()
+tt = getInfo()
+puts(tt)
 
 #  Basic Testing "Stuff" Below
 
