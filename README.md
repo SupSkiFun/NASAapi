@@ -1,12 +1,11 @@
 # NASAapi
-Query a NASA API in 5 languages.
+Query a NASA API in 4 languages.
 
 JSON data is retrieved from the 'Asteroids - NeoWs' section of api.nasa.gov, then
 parsed into a flat, custom structure.  Some averaging and rounding takes place.
 Examples of Raw (not processed) JSON returned from the NASA API is in the JSON folder.
 
-Completed:  PowerShell, Python, Node.js & Ruby
-Some Day:  Go
+Fab Four:  PowerShell, Python, Node.js & Ruby
 
 All Versions were written to run via PowerShell 7, however other
 shells can be used with little or no modification.
@@ -27,16 +26,16 @@ Usage:
         33  let key = 'Your_Key_Goes_Here' ;
         Changes are similar in other languages.
 3.  For PowerShell just run it.  It should function correctly in PowerShell 5 or 7.
-    For Python, install into your main or virtual env the modules in requirements.txt.
+    For Python install into your main or virtual env the modules in requirements.txt.
     For Node.js install into your directory the modules listed in package.json.
-    For Ruby, install the modules within the Gemfile.
+    For Ruby install the modules within the Gemfile.
 4.  From PowerShell 7.0.2, returning the JSON data into a PSCustomObject:
     C:\NASAapi> $ps = .\PowerShell\GetNasa.ps1
     C:\NASAapi> $py = python.exe .\Python\getNasa.py | ConvertFrom-Json -Depth 4
     C:\NASAapi> $nj = node.exe .\Node.js\getNasa.js | ConvertFrom-Json -Depth 4
     C:\NASAapi> $rb = ruby.exe .\Python\getNasa.py | ConvertFrom-Json -Depth 4
 5.  Note that running the Python, Node.Js and Ruby scripts without ConvertFrom-JSON
-    results in 'plain' JSON.
+    results in an output of 'plain' JSON.
 6.  Conversely, to obtain plain JSON from PowerShell, execute
     .\PowerShell\GetNasa.ps1 | ConvertTo-Json -Depth 4
 
