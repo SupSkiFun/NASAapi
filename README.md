@@ -25,11 +25,11 @@ Usage:
         32  //let key = process.env.NASA_API_KEY ;
         33  let key = 'Your_Key_Goes_Here' ;
         Changes are similar in other languages.
-3.  For PowerShell just run it.  It should function correctly in PowerShell 5 or 7.
+3.  For PowerShell just run the script using PowerShell 7.
     For Python install into your main or virtual env the modules in requirements.txt.
     For Node.js install into your directory the modules listed in package.json.
     For Ruby install the modules within the Gemfile.
-4.  From PowerShell 7.0.2, returning the JSON data into a PSCustomObject:
+4.  From PowerShell 7.0.3, returning the JSON data into a PSCustomObject:
     C:\NASAapi> $ps = .\PowerShell\GetNasa.ps1
     C:\NASAapi> $py = python.exe .\Python\getNasa.py | ConvertFrom-Json -Depth 4
     C:\NASAapi> $nj = node.exe .\Node.js\getNasa.js | ConvertFrom-Json -Depth 4
