@@ -46,9 +46,18 @@ function setConfig()
     };
 }
 
+function padDate(dp)
+{
+    // Put this hack in as Date().toISOString() returns UTC as opposed to local time.
+    let hack = (dp.length > 1 ) ? (dp) : "0"+dp ;
+    return hack ;
+}
+
 function makeDate()
 {
-    return new Date().toISOString().split('T')[0];
+    rd = new Date().toLocaleString().split(",")[0].split("/") ;
+    pd = (rd[2]+"-"+padDate(rd[0])+"-"+padDate(rd[1]) ) ;
+    return pd ;
 }
 
 async function getInfo()
