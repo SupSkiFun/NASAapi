@@ -28,7 +28,10 @@ class NasaFun
 
 Function MakeDate
 {
-    Get-Date -UFormat "%F"
+    <#
+        PowerShell 7 can shorten to (Get-Date -UFormat "%F") ; below works for 5 or 7.
+    #>
+    Get-Date -UFormat %Y-%m-%d
 }
 
 Function SetConfig
