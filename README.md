@@ -7,8 +7,15 @@ Examples of Raw (not processed) JSON returned from the NASA API is in the JSON f
 
 Fab Four:  PowerShell, Python, Node.js & Ruby
 
-All Versions were written to run via PowerShell 7, however other
+All Languages were written to run via PowerShell 7, however other
 shells can be used with little or no modification.
+
+Specific Language Versions tested:
+
+    Powershell:  7.0.3 or 5.1.19041
+    Python: 3.8.3
+    Node.js:  14.2.0
+    Ruby:  2.7.1p83
 
 Usage:
 
