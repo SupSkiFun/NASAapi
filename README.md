@@ -3,7 +3,7 @@ Query a NASA API in 4 languages.
 
 JSON data is retrieved from the 'Asteroids - NeoWs' section of api.nasa.gov, then
 parsed into a flat, custom structure.  Some averaging and rounding takes place.
-Examples of Raw (not processed) JSON returned from the NASA API is in the JSON folder.
+Examples of Raw (not processed) JSON returned from the NASA API are in the JSON folder.
 
 Fab Four:  PowerShell, Python, Node.js & Ruby
 
