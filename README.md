@@ -12,7 +12,7 @@ shells can be used with little or no modification.
 
 Specific Language Versions tested:
 
-    Powershell:  7.0.3 or 5.1.19041
+    Powershell:  7.0.3 and 5.1.19041
     Python: 3.8.3
     Node.js:  14.2.0
     Ruby:  2.7.1p83
@@ -33,9 +33,9 @@ Usage:
         33  let key = 'Your_Key_Goes_Here' ;
         Changes are similar in other languages.
 3.  For PowerShell just run the script using PowerShell 5 or 7.
-    For Python install into your main or virtual env the modules in requirements.txt.
-    For Node.js install into your directory the modules listed in package.json.
-    For Ruby install the modules within the Gemfile.
+    For Python install into your main or virtual env the modules in requirements.txt.  'pip install -r requirements.txt'
+    For Node.js install into your directory the modules listed in package.json.  'npm install'
+    For Ruby install the modules within the Gemfile.  'bundle install'
 4.  From PowerShell 7.0.3 or 5.1.19401, returning the JSON data into a PSCustomObject:
     C:\NASAapi> $ps = .\PowerShell\GetNasa.ps1
     C:\NASAapi> $py = python.exe .\Python\getNasa.py | ConvertFrom-Json
@@ -45,4 +45,5 @@ Usage:
     results in an output of 'plain' JSON.
 6.  Conversely, to obtain plain JSON from PowerShell, execute
     .\PowerShell\GetNasa.ps1 | ConvertTo-Json
+
 
