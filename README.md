@@ -1,5 +1,5 @@
 # NASAapi
-Query a NASA API in 4 languages.
+## Query a NASA API in 4 languages.
 
 JSON data is retrieved from the 'Asteroids - NeoWs' section of api.nasa.gov, then
 parsed into a flat, custom structure.  Some averaging and rounding takes place.
