@@ -42,7 +42,6 @@ Usage:
         C:\NASAapi> $nj = node.exe .\Node.js\getNasa.js | ConvertFrom-Json
         C:\NASAapi> $rb = ruby.exe .\Ruby\getNasa.rb | ConvertFrom-Json
     5.  Note that running the Python, Node.Js and Ruby scripts without ConvertFrom-JSON results in an output of 'plain' JSON.
-    6.  Conversely, to obtain plain JSON from PowerShell, execute
-    .\PowerShell\GetNasa.ps1 | ConvertTo-Json
+    6.  Conversely, to obtain plain JSON from PowerShell, execute .\PowerShell\GetNasa.ps1 | ConvertTo-Json
 
 
