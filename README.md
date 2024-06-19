@@ -28,15 +28,25 @@ parsed into a flat, custom structure.
     2.  Less Simple / Not Really Secure:
         * Comment out the key from environment line, and decomment the hard-coded line.
         * In get_Nasa.js, this changes lines 32 and 33 to look as follows:
-        * 32  //let key = process.env.NASA_API_KEY ;
-        * 33  let key = 'Your_Key_Goes_Here' ;
+        ```
+        //let key = process.env.NASA_API_KEY ;
+        let key = 'Your_Key_Goes_Here' ;
+        ```
         * Changes are similar in other languages.
 3.  Configure the Language
     * PowerShell - Nothing required
     * Python - Install into your main or virtual env the modules in requirements.txt.  
-    ```pip install -r requirements.txt```
-    * Node.js - Install into your directory the modules listed in package.json.  ```npm install```
-    * Ruby - Install the modules within the Gemfile.  ```bundle install```
+    ```
+    pip install -r requirements.txt
+    ```
+    * Node.js - Install into your directory the modules listed in package.json.  
+    ```
+    npm install
+    ```
+    * Ruby - Install the modules within the Gemfile.  
+    ```
+    bundle install
+    ```
 4.  From PowerShell 7 or 5, returning the JSON data into a PSCustomObject:
     ```
     $ps = ./PowerShell/GetNasa.ps1
@@ -45,6 +55,7 @@ parsed into a flat, custom structure.
     $rb = ruby.exe ./Ruby/getNasa.rb | ConvertFrom-Json
     ```
 5.  Running the Python, Node.Js and Ruby scripts without ConvertFrom-JSON results in an output of 'plain' JSON.
-6.  Conversely, to obtain plain JSON from PowerShell, execute ```./PowerShell/GetNasa.ps1 | ConvertTo-Json```
-
-
+6.  Conversely, to obtain plain JSON from PowerShell, execute 
+```
+./PowerShell/GetNasa.ps1 | ConvertTo-Json
+```
